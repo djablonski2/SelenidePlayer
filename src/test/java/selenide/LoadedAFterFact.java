@@ -22,7 +22,7 @@ public class LoadedAFterFact {
     }
 
     @Test
-    public void userCanOpenPage() throws InterruptedException {
+    public void userCanOpenPage()  {
 
         open("/dynamic_loading");
         $(byText("Example 2: Element rendered after the fact")).click();

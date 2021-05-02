@@ -23,7 +23,7 @@ public class Second {
     }
 
     @Test
-    public void userCanOpenPage() throws InterruptedException {
+    public void userCanOpenPage()  {
 
         open("/frames");
         $(byText("iFrame")).click();
