@@ -46,7 +46,7 @@ public class PlayerMenu_wReport {
                 ));
         $(byText("Zaloguj")).hover();
 
-        Screenshots.takeScreenShot("Menu_"+Utility.timestamp());
+       // Screenshots.takeScreenShot("Menu_"+Utility.timestamp());
         Screenshots.takeScreenShot($(By.cssSelector("div.menu-desktop")));
 
     }

@@ -9,11 +9,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import selenide.pages.player_pages;
 
 public class Player {
 
-    private CharSequence usernameEmail = "svodsdk@player.mailinator.com";
-    private CharSequence usernamePassword = "Tester22@";
+
 
     @BeforeTest
     public void ustawienieKonfiguracji() {
@@ -30,8 +30,8 @@ public class Player {
         $(byText("Zgadzam się")).click();
         $(byText("Zaloguj")).click();
         $(byText("Zaloguj się e-mailem")).click();
-        $(By.name("login")).sendKeys(usernameEmail);
-        $(By.name("password")).sendKeys(usernamePassword);
+        $(By.name("login")).sendKeys(player_pages.usernameEmail);
+        $(By.name("password")).sendKeys(player_pages.usernamePassword);
         $(By.cssSelector("div.arkose-captcha")).waitWhile(Condition.visible,4000);
         $(By.id("sign_in")).click();
         Screenshots.takeScreenShot("Zalogowanie_"+Utility.timestamp());//
