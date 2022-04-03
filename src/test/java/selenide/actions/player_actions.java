@@ -11,13 +11,11 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class player_actions {
 
-    @Step("przejscie Do Zalogowania")
     public static void przejscieDoZalogowania() {
         $(byText("Zaloguj")).click();
 
     }
 
-    @Step("uzupelnienie Danych Logowania")
     public static void uzupelnienieDanychLogowania() {
         $(byText("Zaloguj się e-mailem")).click();
         $(By.name("login")).sendKeys(player_pages.usernameEmail);
